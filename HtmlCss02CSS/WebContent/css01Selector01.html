@@ -137,6 +137,42 @@
 			transition-duration: 1s;
 		}
 		
+		/* 
+			구조 선택자
+			
+			:first-child : 형제 관계 중에서 첫 번째에 위치하는 태그를 선택
+			:last-child : 형제 관계 중에서 마지막에 위치하는 태그를 선택
+			:ntn-child(수열) : 형제 관계 중에서 앞에서 수열 번째에 태그를 선택 
+			:ntn-last-child(수열) : 형제 관계 중에서 뒤에서 수열 번째에 태그를 선택
+		*/
+		.menu { overflow: hidden }
+		.menu > li {
+			list-style: none;		/* 리스트 앞에 기호를 생략 */
+			float: left;			/* 왼쪽으로 붙인다 */
+			padding: 15px;			/* 안쪽 여백을 설정 */
+			width: 14%;				/* 메뉴 한 칸당 전체 너비의 14%를 차지하도록 한다 */
+			box-sizing: border-box;	/* border(경계) 안쪽 까지를 너비로 계산 */
+			/* box-sizing: content-box; */
+			text-align: center;		/* 태그 안쪽의 텍스트를 가운데 정렬 */
+		}
+		/* 
+			border-radius 
+			좌측 위 꼭짓점, 우측 위 꼭짓점, 우측 아래 꼭짓점, 좌측 아래 꼭짓점 
+		*/
+		.menu > li:first-child { border-radius: 10px 0 0 10px }		
+		.menu > li:last-child { border-radius: 0 10px 10px 0 }
+		.menu > li:nth-child(2n) { background-color: #ff0003 }
+		.menu > li:nth-child(2n+1) { background-color: #800000 }
+		
+		/* 
+			문자 선택자 
+			::first-letter : 첫번째 글자 선택
+			::first-line : 첫번째 줄을 선택
+		*/
+		p::first-letter { font-size: 3em }	/* em(emphemeral unit) : 부모 속성의 배수 : 부모 font-size의 3배 - 현재 p태그의 부모는 body태그 */
+		p::first-line { color: #f00 }		/* p 태그의 첫번째 줄의 색상을 빨간색으로 설정 */
+		
+		
 	</style>
 </head>
 <body>
@@ -220,6 +256,42 @@
 	<div class="transition-box">
 		안녕하십니깐 반갑습니당 아아아아가가가가가나나나나나다다다라라라
 	</div>
+	
+	
+	<ul class="menu">
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+		<li>sixth</li>
+		<li>seventh</li>
+	</ul>
+	
+	
+	<p>
+		It is a long established fact that a reader will be distracted by
+		the readable content of a page when looking at its layout. The point
+		of using Lorem Ipsum is that it has a more-or-less normal distribution
+		of letters, as opposed to using 'Content here, content here', making
+		it look like readable English. Many desktop publishing packages and
+		web page editors now use Lorem Ipsum as their default model text, and
+		a search for 'lorem ipsum' will uncover many web sites still in their
+		infancy. Various versions have evolved over the years, sometimes by
+		accident, sometimes on purpose (injected humour and the like).
+	</p>
+	
+	<p>
+		It is a long established fact that a reader will be distracted by
+		the readable content of a page when looking at its layout. The point
+		of using Lorem Ipsum is that it has a more-or-less normal distribution
+		of letters, as opposed to using 'Content here, content here', making
+		it look like readable English. Many desktop publishing packages and
+		web page editors now use Lorem Ipsum as their default model text, and
+		a search for 'lorem ipsum' will uncover many web sites still in their
+		infancy. Various versions have evolved over the years, sometimes by
+		accident, sometimes on purpose (injected humour and the like).
+	</p>
 	
 </body>
 </html>
