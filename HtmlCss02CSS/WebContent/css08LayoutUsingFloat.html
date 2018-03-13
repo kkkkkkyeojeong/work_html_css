@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS 08 Layout Using Float</title>
+	
+	<style>
+		.container {
+			width: 960px;
+			margin: 0 auto;
+		}
+		
+		#aside {
+			width: 200px;
+			float: left;
+		}
+		
+		#section {
+			width: 760px;
+			float: left;
+		}
+		
+		#wrap {
+			overflow: hidden;
+		}
+		
+		#header {
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3c5bd+0,e86c57+48,ea2803+53,ff6600+78,c72200+100 */
+			background: #f3c5bd; /* Old browsers */
+			background: -moz-linear-gradient(top, #f3c5bd 0%, #e86c57 48%, #ea2803 53%, #ff6600 78%, #c72200 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #f3c5bd 0%,#e86c57 48%,#ea2803 53%,#ff6600 78%,#c72200 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #f3c5bd 0%,#e86c57 48%,#ea2803 53%,#ff6600 78%,#c72200 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200',GradientType=0 ); /* IE6-9 */
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+	
+	<div id="header">
+		<h1>헤더</h1>
+	</div>
+	<div id="navigation">
+		<h1>네비게이션</h1>
+	</div>
+	<div id="wrap">
+		<div id="aside">
+			<h1>Aside</h1>
+			<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+		</div>
+		<div id="section">
+			<h1>Section</h1>
+			<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"</p>
+		</div>
+	</div>
+	<div id="footer">
+		<h1>Footer</h1>
+	</div>
+
+	</div>
+</body>
+</html>
